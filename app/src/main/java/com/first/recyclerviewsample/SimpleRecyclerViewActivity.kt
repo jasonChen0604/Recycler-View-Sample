@@ -10,7 +10,7 @@ import com.first.recyclerviewsample.Adapter.SimpleRecyclerViewAdapter
 class SimpleRecyclerViewActivity : AppCompatActivity() {
 
     private val recyclerView : RecyclerView by lazy { findViewById(R.id.rcl_view) }
-    private val mData: ArrayList<String> = ArrayList()
+    private val data: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +18,10 @@ class SimpleRecyclerViewActivity : AppCompatActivity() {
 
         // 準備資料，塞50個項目到ArrayList裡
         for (i in 0..49) {
-            mData.add("項目$i")
+            data.add("項目$i")
         }
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SimpleRecyclerViewAdapter(mData)
+        recyclerView.adapter = SimpleRecyclerViewAdapter(data)
     }
 }
